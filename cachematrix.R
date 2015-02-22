@@ -13,7 +13,6 @@ makeCacheMatrix <- function(x = matrix()) {
     xinv <- NULL # This will store the result of inversion
     set <- function(y) {
 	  x <<- y
-	    xinv <<- NULL 
 }
 get <- function() x  #This will return the input matrix
 setInv <- function(inv) xinv <<- inv  #This will set the inversed matrix
@@ -21,7 +20,7 @@ getInv <- function() xinv # This will return the inversed matrix
 
       list(set = set, get = get,
 	       setInv = setInv,
-	       getInv = getInv() #
+	       getInv = getInv() 
   }
 
 cacheSolve <- function(x, ...) {
